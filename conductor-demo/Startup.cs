@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
 
 namespace conductor_demo
 {
@@ -22,6 +23,9 @@ namespace conductor_demo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddDbContext<ConductorDemoContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("ConductorDemoContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
