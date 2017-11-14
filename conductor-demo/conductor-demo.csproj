@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>conductor.demo</AssemblyName>
+    <RootNamespace>conductor.demo</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
