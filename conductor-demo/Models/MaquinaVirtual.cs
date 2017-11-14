@@ -13,6 +13,11 @@ namespace conductor.demo.Models
         #region Propriedades
 
         /// <summary>
+        /// Id da máquina virtual.
+        /// </summary>
+        public int Id { get; set; }
+
+        /// <summary>
         /// Nome da máquina virtual.
         /// </summary>
         public string Nome { get; set; }
